@@ -21,6 +21,7 @@
             <TextView
                 android:id="@+id/app_description"
                 android:text="@string/description"
+                android:textColor="@color/textColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:textAppearanceLarge"
@@ -29,6 +30,7 @@
             <TextView
                 android:id="@+id/disclaimer"
                 android:text="@string/disclaimer"
+                android:textColor="@color/textColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:textAppearanceLarge"
@@ -43,7 +45,7 @@
                 android:textAppearance="?android:textAppearanceLarge"
                 android:textStyle="bold"
                 android:textColor="@color/textColor"
-                android:background=""
+                android:background="@drawable/button_rounded"
                 android:padding="@dimen/title_margin"/>
 
         </LinearLayout>
