@@ -20,33 +20,33 @@
 
             <TextView
                 android:id="@+id/app_description"
-                android:text="@string/description"
-                android:textColor="@color/textColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/title_margin"
+                android:text="@string/description"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:layout_margin="@dimen/title_margin"/>
+                android:textColor="@color/textColor"/>
 
             <TextView
                 android:id="@+id/disclaimer"
-                android:text="@string/disclaimer"
-                android:textColor="@color/textColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/title_margin"
+                android:text="@string/disclaimer"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:layout_margin="@dimen/title_margin"/>
+                android:textColor="@color/textColor"/>
 
             <Button
                 android:id="@+id/improve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:background="@drawable/button_rounded"
+                android:padding="@dimen/title_margin"
                 android:text="@string/improve_health"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:textStyle="bold"
                 android:textColor="@color/textColor"
-                android:background="@drawable/button_rounded"
-                android:padding="@dimen/title_margin"/>
+                android:textStyle="bold"/>
 
         </LinearLayout>
     </FrameLayout>
