@@ -3,7 +3,7 @@
     <string name="title">Developer Health</string>
     <string name="exercise_title">Exercise Name Goes Here</string>
     <string name="description">The exercises in this app are designed in consultation with Dr. Steven Handler, a sports medicine chiropractor. It\'s purpose is to help preserve developers\' physical posture while remaining optimally productive.</string>
-    <string name="disclaimer">Disclaimer: This app is for entertainment purposes only and not intended to be taken as serious medical advice. We strongly urge you to visit your health care provider for any discomfort or medical conditions you may be experiencing.</string>
+    <string name="disclaimer">Disclaimer: This app is for entertainment purposes only and is not intended to be taken as serious medical advice. We strongly urge you to visit your health care provider for any discomfort or medical conditions you may be experiencing.</string>
     <string name="time_description">This app will notify you when it\'s time for you to do a series of short exercises. Don\'t worry, we will guide you through the exercises.</string>
     <string name="time_selector">Please select your preferred time frequency below:</string>
     <string name="choose_exercise">Please select which exercise focus you would like to take for this session.</string>
