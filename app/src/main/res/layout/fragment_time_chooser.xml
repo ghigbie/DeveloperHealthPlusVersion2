@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context="layout.TimeChooserFragment">
 
     <LinearLayout
@@ -15,14 +16,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/time_description"
-            android:layout_margin=""
+            android:layout_margin="@dimen/text_margin"
+            android:textColor="@color/textColor"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/time_selector"
+            android:layout_margin="@dimen/text_margin"
+            android:textColor="@color/textColor"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"
             />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorAccent"
+            android:layout_margin="@dimen/spinner_margin"
+            />
+
     </LinearLayout>
 
 </FrameLayout>
