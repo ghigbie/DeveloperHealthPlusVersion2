@@ -9,12 +9,16 @@ import android.view.ViewGroup;
 import com.geogehigbie.developerhealthplusversion2.R;
 
 public class TimeChooserFragment extends Fragment {
+    private View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_time_chooser, container, false);
+        view = inflater.inflate(R.layout.fragment_time_chooser, container, false);
+
+
+
+        return view;
     }
 
 
