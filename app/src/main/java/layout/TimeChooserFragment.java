@@ -44,19 +44,24 @@ public class TimeChooserFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_time_chooser, container, false);
 
+        //if we have a value selected;
+        addOnClickListener();
+
 
 
         return view;
     }
 
-    public addOnClickListener(){
+    public void addOnClickListener(){
         Button button = (Button) view.findViewById(R.id.time_selected_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, ExerciseChooserPage.activity)
+                fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
     }
