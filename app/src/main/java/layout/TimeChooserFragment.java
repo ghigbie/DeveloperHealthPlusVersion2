@@ -2,9 +2,12 @@ package layout;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.geogehigbie.developerhealthplusversion2.R;
 
@@ -35,7 +38,6 @@ public class TimeChooserFragment extends Fragment {
 
     private int NotificationTime;
 
-    private String
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,6 +48,19 @@ public class TimeChooserFragment extends Fragment {
 
         return view;
     }
+
+    public addOnClickListener(){
+        Button button = (Button) view.findViewById(R.id.time_selected_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, ExerciseChooserPage.activity)
+            }
+        });
+    }
+
 
 
 }
