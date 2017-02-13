@@ -1,5 +1,6 @@
 package layout;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -105,9 +106,15 @@ public class TimeChooserFragment extends Fragment {
                 notificationTime = 0;
                 break;
         }
+        int notificationTimeSetterInt;
 
+        SharedPreferences notificationTimeSetter = getActivity().getApplicationContext().getSharedPreferences("timeNotificationFile", 0);
+        notificationTimeSetterInt = notificationTimeSetter.getInt("notificationTime", notificationTime); //I may not need this
+
+        SharedPreferences.Editor editor = notificationTimeSetter.edit();
+        editor.putInt("notificationTime", notificationTime);
+        editor.commit();
     }
-
 
     public void addOnClickListener(){
         Button button = (Button) view.findViewById(R.id.time_selected_button);
