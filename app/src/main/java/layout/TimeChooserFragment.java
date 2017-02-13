@@ -50,7 +50,6 @@ public class TimeChooserFragment extends Fragment {
         addOnClickListener();
 
 
-
         return view;
     }
 
