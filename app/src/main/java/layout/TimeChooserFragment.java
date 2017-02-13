@@ -86,7 +86,9 @@ public class TimeChooserFragment extends Fragment {
         }
 
         Spinner spinner1 = (Spinner) view.findViewById(R.id.spinner_time);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item, timeArrayListStirng);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item, timeArrayListString);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(adapter);
 
     }
 
