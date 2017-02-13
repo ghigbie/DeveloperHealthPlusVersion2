@@ -18,27 +18,27 @@ import java.util.ArrayList;
 public class TimeChooserFragment extends Fragment {
 
     private View view;
-    private ArrayList<String> timeArrayListString = new ArrayList<String>();
-    private ArrayList<Integer> timeArrayListInt = new ArrayList<Integer>();
-
-    private String pleaseChoose = "Please Select a Time";
-    private String time30String = "30 minutes";
-    private String time45String = "45 minutes";
-    private String time60String = "60 minutes";
-    private String time75String = "1 hour & 15 minutes";
-    private String time90String = "1 hour & 30 minutes";
-    private String time105String = "1 hour & 45 minutes";
-    private String time120String = "2 hours";
-
-    private int time0Int = 0;
-    private int time30Int = 30;
-    private int time45Int = 45;
-    private int time60Int = 60;
-    private int time75Int = 75;
-    private int time105Int = 105;
-    private int time120Int = 120;
-
-    private int NotificationTime;
+//    private ArrayList<String> timeArrayListString = new ArrayList<String>();
+//    private ArrayList<Integer> timeArrayListInt = new ArrayList<Integer>();
+//
+//    private String pleaseChoose = "Please Select a Time";
+//    private String time30String = "30 minutes";
+//    private String time45String = "45 minutes";
+//    private String time60String = "60 minutes";
+//    private String time75String = "1 hour & 15 minutes";
+//    private String time90String = "1 hour & 30 minutes";
+//    private String time105String = "1 hour & 45 minutes";
+//    private String time120String = "2 hours";
+//
+//    private int time0Int = 0;
+//    private int time30Int = 30;
+//    private int time45Int = 45;
+//    private int time60Int = 60;
+//    private int time75Int = 75;
+//    private int time105Int = 105;
+//    private int time120Int = 120;
+//
+//    private int NotificationTime;
 
 
     @Override
@@ -46,7 +46,7 @@ public class TimeChooserFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_time_chooser, container, false);
 
-        //if we have a value selected;
+        setSpinnerContent();
         addOnClickListener();
 
 
@@ -54,15 +54,17 @@ public class TimeChooserFragment extends Fragment {
     }
 
     public void setSpinnerContent(){
+        //this is the time that will be used to set the notification time
+        int notificationTime = 0;
 
-        String pleaseChoose = "Please Select a Time";
-        String time30String = "30 minutes";
-        String time45String = "45 minutes";
-        String time60String = "60 minutes";
-        String time75String = "1 hour & 15 minutes";
-        String time90String = "1 hour & 30 minutes";
-        String time105String = "1 hour & 45 minutes";
-        String time120String = "2 hours";
+        final String pleaseChoose = "Please Select a Time";
+        final String time30String = "30 minutes";
+        final String time45String = "45 minutes";
+        final String time60String = "60 minutes";
+        final String time75String = "1 hour & 15 minutes";
+        final String time90String = "1 hour & 30 minutes";
+        final String time105String = "1 hour & 45 minutes";
+        final String time120String = "2 hours";
         String [] timeArrayString = {pleaseChoose, time30String, time45String, time60String, time75String,
                 time90String, time105String, time120String};
 
@@ -71,9 +73,10 @@ public class TimeChooserFragment extends Fragment {
         int time45Int = 45;
         int time60Int = 60;
         int time75Int = 75;
+        int time90Int = 90;
         int time105Int = 105;
         int time120Int = 120;
-        int [] timeArrayInt = {time0Int, time30Int, time45Int, time60Int, time75Int, time105Int, time105Int, time120Int};
+        int [] timeArrayInt = {time0Int, time30Int, time45Int, time60Int, time75Int, time90Int, time105Int, time120Int};
 
         //creates two array lists
         ArrayList<String> timeArrayListString = new ArrayList<String>();
@@ -84,11 +87,45 @@ public class TimeChooserFragment extends Fragment {
             timeArrayListString.add(timeArrayString[i]);
             timeArrayListInt.add(timeArrayInt[i]);
         }
-
+        //declares the spinner and uses the adapter to add items
         Spinner spinner1 = (Spinner) view.findViewById(R.id.spinner_time);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item, timeArrayListString);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter);
+
+        //gets te time from the spinner
+        String timeChoice = spinner1.getSelectedItem().toString();
+
+        //converts the string time to an int
+        switch(timeChoice){
+            case pleaseChoose:
+                notificationTime = 0;
+                break;
+            case time30String:
+                notificationTime = time30Int;
+                break;
+            case time45String:
+                notificationTime = time45Int;
+                break;
+            case time60String:
+                notificationTime = time60Int;
+                break;
+            case time75String:
+                notificationTime = time75Int;
+                break;
+            case time90String:
+                notificationTime = time90Int;
+                break;
+            case time105String:
+                notificationTime = time105Int;
+                break;
+            case time120String:
+                notificationTime = time120Int;
+                break;
+            default:
+                notificationTime = 0;
+                break;
+        }
 
     }
 
