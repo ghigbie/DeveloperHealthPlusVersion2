@@ -56,9 +56,6 @@ public class TimeChooserFragment extends Fragment {
 
     public void setSpinnerContent(){
 
-        ArrayList<String> timeArrayListString = new ArrayList<String>();
-        ArrayList<Integer> timeArrayListInt = new ArrayList<Integer>();
-
         String pleaseChoose = "Please Select a Time";
         String time30String = "30 minutes";
         String time45String = "45 minutes";
@@ -67,9 +64,8 @@ public class TimeChooserFragment extends Fragment {
         String time90String = "1 hour & 30 minutes";
         String time105String = "1 hour & 45 minutes";
         String time120String = "2 hours";
-
-        timeArrayListStirng.add(pleaseChoose);
-        timeArrayListString.add(time30String);
+        String [] timeArrayString = {pleaseChoose, time30String, time45String, time60String, time75String,
+                time90String, time105String, time120String};
 
         int time0Int = 0;
         int time30Int = 30;
@@ -78,6 +74,17 @@ public class TimeChooserFragment extends Fragment {
         int time75Int = 75;
         int time105Int = 105;
         int time120Int = 120;
+        int [] timeArrayInt = {time0Int, time30Int, time45Int, time60Int, time75Int, time105Int, time105Int, time120Int};
+
+        //creates two array lists
+        ArrayList<String> timeArrayListString = new ArrayList<String>();
+        ArrayList<Integer> timeArrayListInt = new ArrayList<Integer>();
+
+        //adds values to the array lists
+        for(int i = 0; i < timeArrayString.length; i++){
+            timeArrayListString.add(timeArrayString[i]);
+            timeArrayListInt.add(timeArrayInt[i]);
+        }
 
         Spinner spinner1 = (Spinner) view.findViewById(R.id.spinner_time);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item, timeArrayListStirng);
