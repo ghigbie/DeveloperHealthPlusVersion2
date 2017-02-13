@@ -115,7 +115,7 @@ public class TimeChooserFragment extends Fragment {
         editor.putInt("notificationTime", notificationTime);
         editor.commit();
     }
-
+    //
     public void addOnClickListener(){
         Button button = (Button) view.findViewById(R.id.time_selected_button);
         button.setOnClickListener(new View.OnClickListener() {
