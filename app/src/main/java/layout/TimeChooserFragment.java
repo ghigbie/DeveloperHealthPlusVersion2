@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.geogehigbie.developerhealthplusversion2.R;
 
@@ -18,27 +19,7 @@ import java.util.ArrayList;
 public class TimeChooserFragment extends Fragment {
 
     private View view;
-//    private ArrayList<String> timeArrayListString = new ArrayList<String>();
-//    private ArrayList<Integer> timeArrayListInt = new ArrayList<Integer>();
-//
-//    private String pleaseChoose = "Please Select a Time";
-//    private String time30String = "30 minutes";
-//    private String time45String = "45 minutes";
-//    private String time60String = "60 minutes";
-//    private String time75String = "1 hour & 15 minutes";
-//    private String time90String = "1 hour & 30 minutes";
-//    private String time105String = "1 hour & 45 minutes";
-//    private String time120String = "2 hours";
-//
-//    private int time0Int = 0;
-//    private int time30Int = 30;
-//    private int time45Int = 45;
-//    private int time60Int = 60;
-//    private int time75Int = 75;
-//    private int time105Int = 105;
-//    private int time120Int = 120;
-//
-//    private int NotificationTime;
+    private int notificationTime = 0; //this is the time that will be used to set the notification time
 
 
     @Override
@@ -54,8 +35,6 @@ public class TimeChooserFragment extends Fragment {
     }
 
     public void setSpinnerContent(){
-        //this is the time that will be used to set the notification time
-        int notificationTime = 0;
 
         final String pleaseChoose = "Please Select a Time";
         final String time30String = "30 minutes";
@@ -135,11 +114,16 @@ public class TimeChooserFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                if (notificationTime != 0) {
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }else{
+                    Toast.makeText(getActivity().getApplicationContext(), "Please select a time " +
+                            "frequency to be notified.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
