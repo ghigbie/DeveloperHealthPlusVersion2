@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,34 +77,45 @@ public class TimeChooserFragment extends Fragment {
         //gets te time from the spinner
         String timeChoice = spinner1.getSelectedItem().toString();
 
+
+        String TAG = "NOTIFCATION TIME SET TO:";
         //converts the string time to an int
         switch(timeChoice){
             case pleaseChoose:
                 notificationTime = 0;
+                Log.d(TAG, timeChoice);
                 break;
             case time30String:
                 notificationTime = time30Int;
+                Log.d(TAG, timeChoice);
                 break;
             case time45String:
                 notificationTime = time45Int;
+                Log.d(TAG, timeChoice);
                 break;
             case time60String:
                 notificationTime = time60Int;
+                Log.d(TAG, timeChoice);
                 break;
             case time75String:
                 notificationTime = time75Int;
+                Log.d(TAG, timeChoice);
                 break;
             case time90String:
                 notificationTime = time90Int;
+                Log.d(TAG, timeChoice);
                 break;
             case time105String:
                 notificationTime = time105Int;
+                Log.d(TAG, timeChoice);
                 break;
             case time120String:
                 notificationTime = time120Int;
+                Log.d(TAG, timeChoice);
                 break;
             default:
                 notificationTime = 0;
+                Log.d(TAG, timeChoice);
                 break;
         }
         int notificationTimeSetterInt;
