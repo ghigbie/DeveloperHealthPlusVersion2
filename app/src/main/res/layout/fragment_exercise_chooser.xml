@@ -12,12 +12,12 @@
 
         <TextView
             android:id="@+id/exercise_intro"
-            android:text="@string/description"
-            android:textColor="@color/textColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceLarge"
             android:layout_margin="@dimen/title_margin"
+            android:text="@string/description"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
             />
 
 
@@ -25,24 +25,50 @@
             android:id="@+id/choose_exercise"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/choose_exercise"
-            android:textColor="@color/textColor"
-            android:textAppearance="?android:textAppearanceLarge"
             android:layout_margin="@dimen/text_margin"
+            android:text="@string/choose_exercise"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
             />
 
         <Button
             android:id="@+id/upper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/upper_back"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textStyle="bold"
-            android:textColor="@color/textColor"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/title_margin"
             android:background="@drawable/button_rounded"
             android:padding="@dimen/title_margin"
+            android:text="@string/upper_back"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/lower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/title_margin"/>
+            android:layout_margin="@dimen/title_margin"
+            android:background="@drawable/button_rounded"
+            android:padding="@dimen/title_margin"
+            android:text="@string/lower_back"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/both"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/title_margin"
+            android:background="@drawable/button_rounded"
+            android:padding="@dimen/title_margin"
+            android:text="@string/both_back"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
 
 
 
