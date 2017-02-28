@@ -29,14 +29,22 @@ public class ExerciseChooserFragment extends Fragment {
         Button buttonLower = (Button) view.findViewById(R.id.lower);
         Button buttonBoth = (Button) view.findViewById(R.id.both);
 
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         buttonUpper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, new UpperExercisesFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+            }
+        });
+
+        buttonLower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
