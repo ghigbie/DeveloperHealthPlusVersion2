@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.geogehigbie.developerhealthplusversion2.R;
 
@@ -85,8 +84,8 @@ public class TimeChooserFragment extends Fragment {
                 String TAG = "NOTIFICATION TIME SET TO: ";
                 System.out.println(TAG + " " + timeChoiceString);
 
-               // converts the string time to an int
-                switch(timeChoiceString){
+                //converts the string time to an int
+                switch (timeChoiceString) {
                     case pleaseChoose:
                         notificationTime = time0Int;
                         Log.d(TAG, "0");
@@ -124,39 +123,33 @@ public class TimeChooserFragment extends Fragment {
                         Log.d(TAG, timeChoiceString);
                         break;
                 }
+
+                if (notificationTime != 0) {
+                    makeButtonVisibleAndStoreTime();
+                }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                String TAG = "NOTHING SELECTED";
-                Log.d(TAG, " no item selected");
+
             }
         });
+    }
 
+
+    public void makeButtonVisibleAndStoreTime() {
         Button button = (Button) view.findViewById(R.id.time_selected_button);
-        if (notificationTime == 0) {
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int notificationTimeToast = TimeChooserFragment.this.notificationTime;
-                    Toast.makeText(getActivity().getApplicationContext(), "Please select a time " +
-                                    "frequency to be notified. Your current notification time is: " + notificationTimeToast,
-                            Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-        else {
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
-                }
-            });
-        }
+        button.setVisibility(View.VISIBLE);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
 
         int notificationTimeSetterInt;
 
@@ -166,14 +159,12 @@ public class TimeChooserFragment extends Fragment {
         SharedPreferences.Editor editor = notificationTimeSetter.edit();
         editor.putInt("notificationTime", notificationTime);
         editor.commit();
-    }
 
-//    public void callToast(){
-//        Toast.makeText(getActivity().getApplicationContext(), "Please select a time " +
-//                        "frequency to be notified. Your current notification time is: " + notificationTime,
-//                Toast.LENGTH_SHORT).show();
-//    }
+    }
 }
+
+
+
 
 
 
