@@ -34,7 +34,7 @@ public class ExerciseChooserFragment extends Fragment {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, )
+                fragmentTransaction.replace(R.id.fragment_container, UpperExercises)
             }
         });
 
