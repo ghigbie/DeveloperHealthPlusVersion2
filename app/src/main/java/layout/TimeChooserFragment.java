@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class TimeChooserFragment extends Fragment {
 
     private View view;
-    private int notificationTime; //this is the time that will be used to set the notification time
+    private int notificationTime = 0; //this is the time that will be used to set the notification time
 
 
     @Override
@@ -125,11 +125,11 @@ public class TimeChooserFragment extends Fragment {
                         break;
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 String TAG = "NOTHING SELECTED";
                 Log.d(TAG, " no item selected");
-
             }
         });
 
