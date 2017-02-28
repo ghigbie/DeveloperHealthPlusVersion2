@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import com.geogehigbie.developerhealthplusversion2.R;
 
@@ -25,7 +24,6 @@ public class UpperExercisesFragment extends Fragment {
     }
 
     public void layoutCreation(){
-        RelativeLayout
 
     }
 
