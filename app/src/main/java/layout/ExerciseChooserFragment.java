@@ -3,6 +3,7 @@ package layout;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,6 @@ public class ExerciseChooserFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_exercise_chooser, container, false);
 
 
-
         return view;
     }
 
@@ -33,7 +33,8 @@ public class ExerciseChooserFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, )
             }
         });
 
