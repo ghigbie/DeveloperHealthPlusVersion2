@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class TimeChooserFragment extends Fragment {
 
     private View view;
-    private int notificationTime = 0; //this is the time that will be used to set the notification time
+    private int notificationTime; //this is the time that will be used to set the notification time
 
 
     @Override
@@ -38,7 +38,7 @@ public class TimeChooserFragment extends Fragment {
 
     public void setSpinnerContent() {
 
-       // int notificationTime;
+        notificationTime = 0;
 
         final String pleaseChoose = "Please Select a Time";
         final String time30String = "30 minutes";
@@ -133,9 +133,19 @@ public class TimeChooserFragment extends Fragment {
             }
         });
 
-
         Button button = (Button) view.findViewById(R.id.time_selected_button);
-        if (notificationTime != 0) {
+        if (notificationTime == 0) {
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int notificationTimeToast = TimeChooserFragment.this.notificationTime;
+                    Toast.makeText(getActivity().getApplicationContext(), "Please select a time " +
+                                    "frequency to be notified. Your current notification time is: " + notificationTimeToast,
+                            Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        else {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -144,13 +154,6 @@ public class TimeChooserFragment extends Fragment {
                     fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
                     fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
-                }
-            });
-        } else {
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    callToast();
                 }
             });
         }
@@ -165,11 +168,11 @@ public class TimeChooserFragment extends Fragment {
         editor.commit();
     }
 
-    public void callToast(){
-        Toast.makeText(getActivity().getApplicationContext(), "Please select a time " +
-                        "frequency to be notified. Your current notification time is: " + notificationTime,
-                Toast.LENGTH_SHORT).show();
-    }
+//    public void callToast(){
+//        Toast.makeText(getActivity().getApplicationContext(), "Please select a time " +
+//                        "frequency to be notified. Your current notification time is: " + notificationTime,
+//                Toast.LENGTH_SHORT).show();
+//    }
 }
 
 
