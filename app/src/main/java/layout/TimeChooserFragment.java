@@ -125,7 +125,6 @@ public class TimeChooserFragment extends Fragment {
                         break;
                 }
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 String TAG = "NOTHING SELECTED";
@@ -133,26 +132,6 @@ public class TimeChooserFragment extends Fragment {
 
             }
         });
-
-//
-//
-//        if (timeChoiceString == timeArrayString[0]) {
-//            notificationTime = timeArrayInt[0];
-//        } else if (timeChoiceString == timeArrayString[1]) {
-//            notificationTime = timeArrayInt[1];
-//        } else if (timeChoiceString == timeArrayString[2]) {
-//            notificationTime = timeArrayInt[2];
-//        } else if (timeChoiceString == timeArrayString[3]) {
-//            notificationTime = timeArrayInt[3];
-//        } else if (timeChoiceString == timeArrayString[4]) {
-//            notificationTime = timeArrayInt[4];
-//        } else if (timeChoiceString == timeArrayString[5]) {
-//            notificationTime = timeArrayInt[5];
-//        } else if (timeChoiceString == timeArrayString[6]) {
-//            notificationTime = timeArrayInt[6];
-//        } else {
-//            notificationTime = timeArrayInt[7];
-//        }
 
 
         Button button = (Button) view.findViewById(R.id.time_selected_button);
@@ -192,26 +171,7 @@ public class TimeChooserFragment extends Fragment {
                 Toast.LENGTH_SHORT).show();
     }
 }
-    //
-//    public void addOnClickListener(){
-//        Button button = (Button) view.findViewById(R.id.time_selected_button);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (notificationTime != 0) {
-//                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                    fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
-//                    fragmentTransaction.addToBackStack(null);
-//                    fragmentTransaction.commit();
-//                }else{
-//                    Toast.makeText(getActivity().getApplicationContext(), "Please select a time " +
-//                            "frequency to be notified. Your current notification time is:" + notificationTime,
-//                            Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//    }
+
 
 
 
