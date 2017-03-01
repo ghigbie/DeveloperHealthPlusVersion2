@@ -1,4 +1,4 @@
-package com.geogehigbie.developerhealthplusversion2;
+package com.geogehigbie.developerhealthplusversion2.activitites;
 
 import android.app.Activity;
 import android.content.Intent;

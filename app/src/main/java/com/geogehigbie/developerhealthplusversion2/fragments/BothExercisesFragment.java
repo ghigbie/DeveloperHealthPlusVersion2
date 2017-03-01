@@ -1,4 +1,4 @@
-package layout;
+package com.geogehigbie.developerhealthplusversion2.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,18 +9,21 @@ import android.view.ViewGroup;
 import com.geogehigbie.developerhealthplusversion2.R;
 
 
-public class LowerExercisesFragment extends Fragment {
+public class BothExercisesFragment extends Fragment {
+
 
     private View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_lower_exercises, container, false);
+        view = inflater.inflate(R.layout.fragment_both_exercises, container, false);
 
 
 
         return view;
     }
+
+
 
 }

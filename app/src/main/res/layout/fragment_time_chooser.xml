@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
-    tools:context="layout.TimeChooserFragment">
+    tools:context=".fragments.TimeChooserFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

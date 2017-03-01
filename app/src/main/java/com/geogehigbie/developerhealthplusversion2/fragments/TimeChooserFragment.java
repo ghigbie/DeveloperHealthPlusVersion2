@@ -1,4 +1,4 @@
-package layout;
+package com.geogehigbie.developerhealthplusversion2.fragments;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
