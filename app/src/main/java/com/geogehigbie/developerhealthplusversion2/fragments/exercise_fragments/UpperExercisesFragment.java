@@ -1,4 +1,4 @@
-package com.geogehigbie.developerhealthplusversion2.fragments;
+package com.geogehigbie.developerhealthplusversion2.fragments.exercise_fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

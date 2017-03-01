@@ -1,4 +1,4 @@
-package com.geogehigbie.developerhealthplusversion2.fragments;
+package com.geogehigbie.developerhealthplusversion2.fragments.exercise_fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,9 +19,7 @@ public class ExerciseChooserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_exercise_chooser, container, false);
-
         setOnClickListeners();
-
         return view;
     }
 

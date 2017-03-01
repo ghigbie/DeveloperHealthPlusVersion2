@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.geogehigbie.developerhealthplusversion2.R;
+import com.geogehigbie.developerhealthplusversion2.fragments.exercise_fragments.ExerciseChooserFragment;
 
 import java.util.ArrayList;
 
