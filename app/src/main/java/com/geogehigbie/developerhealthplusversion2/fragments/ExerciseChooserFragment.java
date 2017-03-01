@@ -20,11 +20,12 @@ public class ExerciseChooserFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_exercise_chooser, container, false);
 
+        setOnClickListeners();
 
         return view;
     }
 
-    public void setOnClickListener(){
+    public void setOnClickListeners(){
         Button buttonUpper = (Button) view.findViewById(R.id.upper);
         Button buttonLower = (Button) view.findViewById(R.id.lower);
         Button buttonBoth = (Button) view.findViewById(R.id.both);
@@ -35,18 +36,25 @@ public class ExerciseChooserFragment extends Fragment {
         buttonUpper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fragmentTransaction.replace(R.id.fragment_container, new UpperExercisesFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                fragmentTransaction.replace(R.id.fragment_container_exercises, new UpperExercisesFragment());
             }
         });
 
         buttonLower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                fragmentTransaction.replace(R.id.fragment_container_exercises, new LowerExercisesFragment());
             }
         });
+
+        buttonBoth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentTransaction.replace(R.id.fragment_container_exercises, new BothExercisesFragment());
+            }
+        });
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
 
 
     }
