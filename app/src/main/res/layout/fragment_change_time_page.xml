@@ -15,13 +15,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="@string/time_selection_choice"
+            android:text="@string/current_time_selection_choice"
             android:layout_alignParentTop="true"
             android:textColor="@color/textColor"
             android:textAppearance="?android:textAppearanceLarge"/>
 
         <LinearLayout
-            android:id="@+id/selection_page_linear_layout"
+            android:id="@+id/selection_page_linear_layout2"
             android:layout_below="@id/current_selection"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
@@ -30,7 +30,7 @@
             android:layout_margin="@dimen/half_text_margin">
 
             <TextView
-                android:id="@+id/int_time_current"
+                android:id="@+id/int_time_current2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/half_text_margin"
@@ -40,7 +40,7 @@
                 android:textAppearance="?android:textAppearanceLarge"/>
 
             <TextView
-                android:id="@+id/minutes_text_view"
+                android:id="@+id/minutes_text_view2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/half_text_margin"
@@ -51,27 +51,38 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/change_time_question"
+            android:layout_below="@id/selection_page_linear_layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/change_time_question"
+            android:textColor="@color/textColor"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
         <LinearLayout
-            android:id="@+id/centered_linear_layout"
+            android:id="@+id/choice_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_centerInParent="true"
+            android:layout_below="@id/change_time_question"
+            android:layout_margin="@dimen/title_margin"
             android:gravity="center_horizontal">
 
 
-        <Button
-            android:id="@+id/yes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/button_margin"
-            android:background="@drawable/button_rounded"
-            android:padding="@dimen/title_margin"
-            android:text="@string/yes"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:textColor="@color/textColor"
-            android:textStyle="bold"/>
+            <Button
+                android:id="@+id/yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@drawable/button_rounded"
+                android:padding="@dimen/title_margin"
+                android:text="@string/yes"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"/>
 
 
             <Button

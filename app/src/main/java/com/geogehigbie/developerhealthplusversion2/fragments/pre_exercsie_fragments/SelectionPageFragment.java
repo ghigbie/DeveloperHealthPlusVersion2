@@ -49,6 +49,7 @@ public class SelectionPageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //going to set the background service
+                setAndGetSharedPreferences();
                 setBackgroundService();
 
                 //close the app
@@ -57,19 +58,23 @@ public class SelectionPageFragment extends Fragment {
         });
     }
 
-    public void setBackgroundService(){
-
-        int notificationTimeSetterInt;
+    public void setAndGetSharedPreferences() BackgroundService(){
         isFirstTime = false;
 
+
+
         SharedPreferences notificationTimeSetter = getActivity().getApplicationContext().getSharedPreferences("timeNotificationFile", 0);
-        notificationTimeSetterInt = notificationTimeSetter.getInt("notificationTime", notificationTime); //I may not need this
+
 
         SharedPreferences.Editor editor = notificationTimeSetter.edit();
         editor.putInt("notificationTime", notificationTime);
         editor.putBoolean("isFirstTime", isFirstTime);
         editor.commit();
 
+
+    }
+
+    public void setBackgroundService(){
 
     }
 

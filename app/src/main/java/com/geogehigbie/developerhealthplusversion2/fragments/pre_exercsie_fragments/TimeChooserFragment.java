@@ -1,6 +1,5 @@
 package com.geogehigbie.developerhealthplusversion2.fragments.pre_exercsie_fragments;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -159,16 +158,16 @@ public class TimeChooserFragment extends Fragment {
             }
         });
 
-        int notificationTimeSetterInt;
-
-
-        SharedPreferences notificationTimeSetter = getActivity().getApplicationContext().getSharedPreferences("timeNotificationFile", 0);
-        notificationTimeSetterInt = notificationTimeSetter.getInt("notificationTime", notificationTime); //I may not need this
-
-        SharedPreferences.Editor editor = notificationTimeSetter.edit();
-        editor.putInt("notificationTime", notificationTime);
-        editor.putBoolean("isFirstTime", isFirstTime);
-        editor.commit();
+//        int notificationTimeSetterInt;
+//
+//
+//        SharedPreferences notificationTimeSetter = getActivity().getApplicationContext().getSharedPreferences("timeNotificationFile", 0);
+//        notificationTimeSetterInt = notificationTimeSetter.getInt("notificationTime", notificationTime); //I may not need this
+//
+//        SharedPreferences.Editor editor = notificationTimeSetter.edit();
+//        editor.putInt("notificationTime", notificationTime);
+//        editor.putBoolean("isFirstTime", isFirstTime);
+//        editor.commit();
 
     }
 }
