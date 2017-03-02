@@ -1,10 +1,9 @@
 package com.geogehigbie.developerhealthplusversion2.fragments;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.geogehigbie.developerhealthplusversion2.R;
-import com.geogehigbie.developerhealthplusversion2.fragments.exercise_fragments.ExerciseChooserFragment;
+import com.geogehigbie.developerhealthplusversion2.activitites.ExerciseActivity;
 
 import java.util.ArrayList;
 
@@ -144,11 +143,14 @@ public class TimeChooserFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                Intent intent = new Intent(getContext(), ExerciseActivity.class);
+                startActivity(intent);
+
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
             }
         });
 

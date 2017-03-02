@@ -34,25 +34,37 @@ public class ExerciseChooserFragment extends Fragment {
         buttonUpper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container_exercises, new UpperExercisesFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
         buttonLower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container_exercises, new LowerExercisesFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
         buttonBoth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container_exercises, new BothExercisesFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+//        fragmentTransaction.addToBackStack(null);
+//        fragmentTransaction.commit();
 
 
     }
