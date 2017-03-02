@@ -26,16 +26,109 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/day_chooser_text"
             android:layout_margin="@dimen/title_margin"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <CheckedTextView
+            <LinearLayout
+                android:id="@+id/days_row1"
+                android:layout_weight="1"
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:text="@string/days"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="@color/textColor"
-                android:textStyle="bold"/>
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:text="@string/monday"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/check_box_text_padding"
+                    android:buttonTint="@color/textColor">
+                </CheckBox>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:text="@string/tuesday"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/check_box_text_padding"
+                    android:buttonTint="@color/textColor">
+                </CheckBox>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:text="@string/wednesday"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/check_box_text_padding"
+                    android:buttonTint="@color/textColor">
+                </CheckBox>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:text="@string/thursday"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/check_box_text_padding"
+                    android:buttonTint="@color/textColor">
+                </CheckBox>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/days_row2"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:text="@string/friday"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/check_box_text_padding"
+                    android:buttonTint="@color/textColor">
+                </CheckBox>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:text="@string/saturday"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/check_box_text_padding"
+                    android:buttonTint="@color/textColor">
+                </CheckBox>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin"
+                    android:text="@string/sunday"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/check_box_text_padding"
+                    android:buttonTint="@color/textColor">
+                </CheckBox>
+
+        </LinearLayout>
 
 
         </LinearLayout>
