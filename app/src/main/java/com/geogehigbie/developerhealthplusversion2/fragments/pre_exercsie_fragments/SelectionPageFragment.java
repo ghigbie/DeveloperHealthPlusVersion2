@@ -72,7 +72,7 @@ public class SelectionPageFragment extends Fragment {
         setOnClickListeners();
 
 
-        return;
+        return view;
     }
 
     public void populateValues(){
