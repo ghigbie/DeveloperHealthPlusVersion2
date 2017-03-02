@@ -1,9 +1,10 @@
 package com.geogehigbie.developerhealthplusversion2.fragments.pre_exercsie_fragments;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,6 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.geogehigbie.developerhealthplusversion2.R;
-import com.geogehigbie.developerhealthplusversion2.activities.ExerciseActivity;
 
 import java.util.ArrayList;
 
@@ -75,6 +75,7 @@ public class TimeChooserFragment extends Fragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item, timeArrayListString);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapter);
+        spinner1.setSelection(0);
 
         //gets te time from the spinner
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -143,14 +144,18 @@ public class TimeChooserFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ExerciseActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getActivity(), ExerciseActivity.class);
+//                startActivity(intent);
+                SelectionPageFragment selectionPageFragment = new SelectionPageFragment();
+                Bundle bundle = new Bundle();
+                bundle.putInt("notificationTime", notificationTime);
+                selectionPageFragment.setArguments(bundle);
 
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.fragment_container, new ExerciseChooserFragment());
-//                fragmentTransaction.addToBackStack(null);
-//                fragmentTransaction.commit();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, selectionPageFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 

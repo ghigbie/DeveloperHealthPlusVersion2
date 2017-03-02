@@ -5,8 +5,7 @@
     android:background="@color/backgroundColor"
     tools:context="com.geogehigbie.developerhealthplusversion2.fragments.pre_exercsie_fragments.SelectionPageFragment">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -16,35 +15,55 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:text="@string/time_selection_choice"
+            android:layout_alignParentTop="true"
             android:textColor="@color/textColor"
             android:textAppearance="?android:textAppearanceLarge"/>
 
         <LinearLayout
             android:id="@+id/selection_page_linear_layout"
+            android:layout_below="@id/selection_time"
+            android:gravity="center_horizontal"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/half_text_margin">
 
             <TextView
                 android:id="@+id/int_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
+                android:layout_margin="@dimen/half_text_margin"
                 android:text="30"
                 android:textColor="@color/textColor"
+                android:textStyle="bold"
                 android:textAppearance="?android:textAppearanceLarge"/>
 
             <TextView
                 android:id="@+id/minutes_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
+                android:layout_margin="@dimen/half_text_margin"
                 android:text="@string/minutes"
                 android:textColor="@color/textColor"
+                android:textStyle="bold"
                 android:textAppearance="?android:textAppearanceLarge"/>
 
         </LinearLayout>
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/set_up_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@drawable/button_rounded"
+                android:padding="@dimen/title_margin"
+                android:text="@string/set_up_complete"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
 
 </FrameLayout>

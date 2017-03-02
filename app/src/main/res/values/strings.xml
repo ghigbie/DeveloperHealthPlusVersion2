@@ -9,6 +9,7 @@
     <string name="choose_exercise">Please select which exercise focus you would like to take for this session.</string>
     <string name="set_time">Set Time</string>
     <string name="time_selection_choice">Thank you. This app will notify you to perform the recommended back exercises every:</string>
+    <string name="set_up_complete">Set Up Complete</string>
     <string name="minutes">Minutes</string>
     <string name="improve_health">Improve My Health!</string>
     <string name="upper_back">Work on My Upper Back</string>
