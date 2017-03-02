@@ -17,6 +17,8 @@
     <string name="both_back">Work on Upper &amp; Lower</string>
     <string name="card_title">Exercise Title</string>
     <string name="card_description">This is a description of how to do this particular exercise. You should do it this way, and avoid injury.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
