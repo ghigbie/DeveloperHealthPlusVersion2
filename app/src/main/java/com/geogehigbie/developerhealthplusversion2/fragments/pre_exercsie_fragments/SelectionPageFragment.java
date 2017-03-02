@@ -61,18 +61,18 @@ public class SelectionPageFragment extends Fragment {
     public void setAndGetSharedPreferences() {
         isFirstTime = false;
 
-
-
+        //this gets the shared preferences
         SharedPreferences notificationTimeSetter = getActivity().getApplicationContext().getSharedPreferences("timeNotificationFile", 0);
+        notificationTime = notificationTimeSetter.getInt("notificationTime", notificationTime);
 
-
+        //this puts the shared preferences in the file
         SharedPreferences.Editor editor = notificationTimeSetter.edit();
         editor.putInt("notificationTime", notificationTime);
         editor.putBoolean("isFirstTime", isFirstTime);
         editor.commit();
-
-
     }
+
+
 
     public void setBackgroundService(){
 
