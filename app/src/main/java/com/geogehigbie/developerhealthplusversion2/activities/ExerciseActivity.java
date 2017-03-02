@@ -1,4 +1,4 @@
-package com.geogehigbie.developerhealthplusversion2.activitites;
+package com.geogehigbie.developerhealthplusversion2.activities;
 
 import android.app.ActionBar;
 import android.os.Bundle;

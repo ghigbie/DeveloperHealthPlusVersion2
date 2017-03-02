@@ -1,4 +1,4 @@
-package com.geogehigbie.developerhealthplusversion2.activitites;
+package com.geogehigbie.developerhealthplusversion2.activities;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.geogehigbie.developerhealthplusversion2.R;
-import com.geogehigbie.developerhealthplusversion2.fragments.TimeChooserFragment;
+import com.geogehigbie.developerhealthplusversion2.fragments.pre_exercsie_fragments.TimeChooserFragment;
 
 
 public class MainActivity extends AppCompatActivity {

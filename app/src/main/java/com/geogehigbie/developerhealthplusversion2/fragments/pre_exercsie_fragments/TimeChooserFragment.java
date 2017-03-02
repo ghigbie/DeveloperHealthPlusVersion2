@@ -1,4 +1,4 @@
-package com.geogehigbie.developerhealthplusversion2.fragments;
+package com.geogehigbie.developerhealthplusversion2.fragments.pre_exercsie_fragments;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.geogehigbie.developerhealthplusversion2.R;
-import com.geogehigbie.developerhealthplusversion2.activitites.ExerciseActivity;
+import com.geogehigbie.developerhealthplusversion2.activities.ExerciseActivity;
 
 import java.util.ArrayList;
 
@@ -143,7 +143,7 @@ public class TimeChooserFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), ExerciseActivity.class);
+                Intent intent = new Intent(getActivity(), ExerciseActivity.class);
                 startActivity(intent);
 
 //                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

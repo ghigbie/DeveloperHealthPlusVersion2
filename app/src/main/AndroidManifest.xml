@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".activitites.SplashActivity"
+            android:name=".activities.SplashActivity"
             android:theme="@style/SplashPageTheme"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -20,18 +20,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activitites.MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
             </intent-filter>
         </activity>
 
-        <actiity android:name=".activities.ExerciseActtivity">
-            <intent-filter>
-                <action android:name="android.intent.action.Exercise" />
-
-            </intent-filter>
+        <actiity android:name=".activities.ExerciseActivity">
         </actiity>
     </application>
 
