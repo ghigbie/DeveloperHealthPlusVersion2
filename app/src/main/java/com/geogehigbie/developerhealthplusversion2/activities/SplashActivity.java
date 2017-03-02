@@ -10,11 +10,20 @@ import android.os.Bundle;
 
 public class SplashActivity extends Activity {
 
+    private boolean firstTime;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent(this, MainActivity.class);
+        firstTime = false;
+
+        Intent intent;
+        if(firstTime) {
+            intent = new Intent(this, MainActivity.class);
+        }else{
+            intent = new Intent(this, ExerciseActivity.class);
+        }
         startActivity(intent);
         finish();
     }
