@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.geogehigbie.developerhealthplusversion2.R;
 
@@ -61,12 +62,37 @@ public class SelectionPageFragment extends Fragment {
         }
     }
 
+    private View view;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_selection_page, container, false);
+        view = inflater.inflate(R.layout.fragment_selection_page, container, false);
+
+        setOnClickListeners();
+
+
+        return;
     }
+
+    public void populateValues(){
+
+    }
+
+    public void setOnClickListeners(){
+        Button button = (Button) view.findViewById(R.id.set_up_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //going to set the background service
+
+
+                //going to close the app
+                getActivity().finish();
+            }
+        });
+    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
