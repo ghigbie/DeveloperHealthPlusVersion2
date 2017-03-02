@@ -4,10 +4,28 @@
     android:layout_height="match_parent"
     tools:context="com.geogehigbie.developerhealthplusversion2.fragments.pre_exercsie_fragments.SelectionPageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/selection_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/time_selection_choice"
+            android:textColor="@color/textColor"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+        <LinearLayout
+            android:id="@+id/selection_page_linear_layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>
