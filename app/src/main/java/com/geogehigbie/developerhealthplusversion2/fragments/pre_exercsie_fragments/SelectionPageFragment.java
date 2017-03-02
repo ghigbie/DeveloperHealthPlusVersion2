@@ -58,7 +58,7 @@ public class SelectionPageFragment extends Fragment {
         });
     }
 
-    public void setAndGetSharedPreferences() BackgroundService(){
+    public void setAndGetSharedPreferences() {
         isFirstTime = false;
 
 
