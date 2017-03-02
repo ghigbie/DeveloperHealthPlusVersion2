@@ -31,101 +31,108 @@
 
             <LinearLayout
                 android:id="@+id/days_row1"
-                android:layout_weight="1"
-                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/monday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"
+                    android:buttonTint="@color/textColor"
+                    android:paddingLeft="@dimen/check_box_text_padding"
                     android:text="@string/monday"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/textColor"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/check_box_text_padding"
-                    android:buttonTint="@color/textColor">
+                    android:textStyle="bold">
                 </CheckBox>
 
                 <CheckBox
+                    android:id="@+id/tuesday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"
+                    android:buttonTint="@color/textColor"
+                    android:paddingLeft="@dimen/check_box_text_padding"
                     android:text="@string/tuesday"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/textColor"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/check_box_text_padding"
-                    android:buttonTint="@color/textColor">
+                    android:textStyle="bold">
                 </CheckBox>
 
                 <CheckBox
+                    android:id="@+id/wednesday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"
+                    android:buttonTint="@color/textColor"
+                    android:paddingLeft="@dimen/check_box_text_padding"
                     android:text="@string/wednesday"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/textColor"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/check_box_text_padding"
-                    android:buttonTint="@color/textColor">
+                    android:textStyle="bold">
                 </CheckBox>
 
                 <CheckBox
+                    android:id="@+id/thursday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"
+                    android:buttonTint="@color/textColor"
+                    android:paddingLeft="@dimen/check_box_text_padding"
                     android:text="@string/thursday"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/textColor"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/check_box_text_padding"
-                    android:buttonTint="@color/textColor">
+                    android:textStyle="bold">
                 </CheckBox>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/days_row2"
-                android:layout_weight="1"
-                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/friday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"
+                    android:buttonTint="@color/textColor"
+                    android:paddingLeft="@dimen/check_box_text_padding"
                     android:text="@string/friday"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/textColor"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/check_box_text_padding"
-                    android:buttonTint="@color/textColor">
+                    android:textStyle="bold">
                 </CheckBox>
 
                 <CheckBox
+                    android:id="@+id/saturday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"
+                    android:buttonTint="@color/textColor"
+                    android:paddingLeft="@dimen/check_box_text_padding"
                     android:text="@string/saturday"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/textColor"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/check_box_text_padding"
-                    android:buttonTint="@color/textColor">
+                    android:textStyle="bold">
                 </CheckBox>
 
                 <CheckBox
+                    android:id="@+id/sunday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"
+                    android:buttonTint="@color/textColor"
+                    android:paddingLeft="@dimen/check_box_text_padding"
                     android:text="@string/sunday"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/textColor"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/check_box_text_padding"
-                    android:buttonTint="@color/textColor">
+                    android:textStyle="bold">
                 </CheckBox>
 
         </LinearLayout>
@@ -133,6 +140,21 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/next_button_day_Chooser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/day_chooser_layout"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/button_margin"
+            android:background="@drawable/button_rounded"
+            android:padding="@dimen/title_margin"
+            android:text="@string/next"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"/>
+        />
 
 
 
