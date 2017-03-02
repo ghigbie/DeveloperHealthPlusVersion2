@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context="com.geogehigbie.developerhealthplusversion2.fragments.post_exercise_fragments.ChangeTimeSettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time_description2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/time_description"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/time_selector"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/title_margin" />
+
+        <Button
+            android:id="@+id/time_selected_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/title_margin"
+            android:background="@drawable/button_rounded"
+            android:onClick="onClickTimeSelectionSet"
+            android:padding="@dimen/title_margin"
+            android:text="@string/set_time"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</FrameLayout>

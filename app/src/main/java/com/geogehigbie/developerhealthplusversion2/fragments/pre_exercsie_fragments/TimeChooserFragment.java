@@ -161,11 +161,13 @@ public class TimeChooserFragment extends Fragment {
 
         int notificationTimeSetterInt;
 
+
         SharedPreferences notificationTimeSetter = getActivity().getApplicationContext().getSharedPreferences("timeNotificationFile", 0);
         notificationTimeSetterInt = notificationTimeSetter.getInt("notificationTime", notificationTime); //I may not need this
 
         SharedPreferences.Editor editor = notificationTimeSetter.edit();
         editor.putInt("notificationTime", notificationTime);
+        editor.putBoolean("isFirstTime", isFirstTime);
         editor.commit();
 
     }

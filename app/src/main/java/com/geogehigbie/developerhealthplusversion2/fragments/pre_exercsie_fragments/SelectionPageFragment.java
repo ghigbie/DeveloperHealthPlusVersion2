@@ -1,5 +1,6 @@
 package com.geogehigbie.developerhealthplusversion2.fragments.pre_exercsie_fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ public class SelectionPageFragment extends Fragment {
 
     private View view;
     private int notificationTime;
+    private boolean isFirstTime;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,6 +58,18 @@ public class SelectionPageFragment extends Fragment {
     }
 
     public void setBackgroundService(){
+
+        int notificationTimeSetterInt;
+        isFirstTime = false;
+
+        SharedPreferences notificationTimeSetter = getActivity().getApplicationContext().getSharedPreferences("timeNotificationFile", 0);
+        notificationTimeSetterInt = notificationTimeSetter.getInt("notificationTime", notificationTime); //I may not need this
+
+        SharedPreferences.Editor editor = notificationTimeSetter.edit();
+        editor.putInt("notificationTime", notificationTime);
+        editor.putBoolean("isFirstTime", isFirstTime);
+        editor.commit();
+
 
     }
 
