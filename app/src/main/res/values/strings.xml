@@ -21,7 +21,7 @@
     <string name="change_time_question">Would you like to change thow often this app notifies you?</string>
     <string name="yes">Yes</string>
     <string name="no">No </string>
-    <string name="days">On which days of the week would you like to be notified? Please select them below:</string>
+    <string name="days">On which days of the week would you like to be notified? Please select the days then tap "Next" below:</string>
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
     <string name="wednesday">Wednesday</string>

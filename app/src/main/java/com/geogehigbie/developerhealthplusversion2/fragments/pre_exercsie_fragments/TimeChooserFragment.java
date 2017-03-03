@@ -143,16 +143,14 @@ public class TimeChooserFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), ExerciseActivity.class);
-//                startActivity(intent);
-                SelectionPageFragment selectionPageFragment = new SelectionPageFragment();
+                DayChooserFragment dayChooserFragment = new DayChooserFragment();
                 Bundle bundle = new Bundle();
                 bundle.putInt("notificationTime", notificationTime);
-                selectionPageFragment.setArguments(bundle);
+                dayChooserFragment.setArguments(bundle);
 
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, selectionPageFragment);
+                fragmentTransaction.replace(R.id.fragment_container, dayChooserFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
