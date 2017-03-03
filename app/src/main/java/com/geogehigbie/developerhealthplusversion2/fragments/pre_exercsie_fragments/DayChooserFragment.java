@@ -107,7 +107,7 @@ public class DayChooserFragment extends Fragment {
                             Bundle bundle = new Bundle();
                             bundle.putInt("notificationTime", notificationTime);
                             bundle.putBooleanArray("daysActive", daysActive);
-                            bundle.putStringArray("daysActiveString", daysActiveString);
+                            bundle.putStringArrayList("daysActiveStringArrayList", daysActiveStringArrayList);
 
                             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
