@@ -11,11 +11,15 @@ import android.widget.TextView;
 
 import com.geogehigbie.developerhealthplusversion2.R;
 
+import java.util.ArrayList;
+
 
 public class SelectionPageFragment extends Fragment {
 
     private View view;
     private int notificationTime;
+    boolean [] daysActive;
+    ArrayList<String> daysActiveStringArrayList;
     private boolean isFirstTime;
 
     @Override
@@ -26,7 +30,10 @@ public class SelectionPageFragment extends Fragment {
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             notificationTime = bundle.getInt("notificationTime", notificationTime);
+            daysActive = bundle.getBooleanArray("daysActive");
+            daysActiveStringArrayList = bundle.getStringArrayList("daysActiveStringArrayList");
         }
+
 
         populateValues();
 
