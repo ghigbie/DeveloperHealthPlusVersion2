@@ -76,9 +76,12 @@ public class SelectionPageFragment extends Fragment {
         SharedPreferences.Editor editor = notificationTimeSetter.edit();
         editor.putInt("notificationTime", notificationTime);
         editor.putBoolean("isFirstTime", isFirstTime);
+        for(int i = 0; i < daysActive.length; i++){
+            editor.putBoolean(daysActiveStringArrayList.get(i), daysActive[i]);
+        }
         editor.commit();
-    }
 
+    }
 
 
     public void setBackgroundService(){

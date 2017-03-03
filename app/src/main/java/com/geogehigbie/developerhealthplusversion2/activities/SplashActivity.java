@@ -16,7 +16,7 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        firstTime = false;
+        firstTime = true;
 
         Intent intent;
         if(firstTime) {
